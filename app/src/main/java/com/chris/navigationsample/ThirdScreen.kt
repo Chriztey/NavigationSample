@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ThirdScreen (navigateToFirstScreen : ()->Unit) {
+fun ThirdScreen (name : String, age : String, navigateToFirstScreen : ()->Unit) {
 
     Column (
         modifier = Modifier
@@ -31,7 +31,7 @@ fun ThirdScreen (navigateToFirstScreen : ()->Unit) {
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(text = "This is the third screen", fontSize = 24.sp)
-        Text(text = "Welcome", fontSize = 24.sp)
+        Text(text = "Welcome $name of $age", fontSize = 24.sp)
         Spacer(modifier = Modifier.height(16.dp))
 
 
