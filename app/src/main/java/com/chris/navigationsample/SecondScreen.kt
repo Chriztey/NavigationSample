@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SecondScreen () {
+fun SecondScreen (navigateToFirstScreen : ()->Unit) {
 
     Column (
         modifier = Modifier
@@ -35,7 +35,7 @@ fun SecondScreen () {
         Spacer(modifier = Modifier.height(16.dp))
 
 
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navigateToFirstScreen() }) {
             Text(text = "Go back to first screen")
         }
     }
@@ -44,5 +44,5 @@ fun SecondScreen () {
 @Preview(showBackground = true)
 @Composable
 fun SecondPreview() {
-    SecondScreen()
+    SecondScreen({})
 }
